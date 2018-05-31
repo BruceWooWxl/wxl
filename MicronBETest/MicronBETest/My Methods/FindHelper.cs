@@ -86,8 +86,8 @@ namespace MicronBETest
                 if (yield.PRODUCT_ID != productID)
                     continue;
 
-                if (yield.STEP_ID != stepID)
-                    continue;
+                //if (yield.STEP_ID != stepID)
+                    //continue;
 
                 return Convert.ToDouble(yield.YIELD);
             }
