@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<vxml:Document xmlns:vxml="http://www.vms-solutions.com/mozart/vxml/2012/1" xmlns:def="definitions" xmlns:ref="references" ContentType="dataclass" ContentKey="My Objects" xmlns="Mozart.Task.Execution.Design, Version=2017.4.112.3, Culture=neutral, PublicKeyToken=null" xmlns:ctm="clr-namespace:Mozart.Task.Model;assembly:Mozart.Task.Model, Version=2017.4.112.2, Culture=neutral, PublicKeyToken=null" xmlns:cdm="clr-namespace:Mozart.DataActions.Metadata;assembly:Mozart.DataActions, Version=2017.4.112.2, Culture=neutral, PublicKeyToken=null" xmlns:css="clr-namespace:Mozart.SeePlan.SemiBE.DataModel;assembly:Mozart.SeePlan.SemiBE, Version=2017.4.112.3, Culture=neutral, PublicKeyToken=null" xmlns:css2="clr-namespace:Mozart.SeePlan.SemiBE.Pegging;assembly:Mozart.SeePlan.SemiBE, Version=2017.4.112.3, Culture=neutral, PublicKeyToken=null">
+  <vxml:Content>
+    <FDataClassRoot Name="My Objects">
+      <DataMarts>
+        <FDataMarts Name="DataMarts">
+          <Children Capacity="4">
+            <FDataMartRoot Name="InputMart">
+              <Children Capacity="8">
+                <FDataMartFolder Name="My Objects">
+                  <Children Capacity="4">
+                    <FDataMartFolder Name="Common" />
+                  </Children>
+                </FDataMartFolder>
+              </Children>
+            </FDataMartRoot>
+          </Children>
+        </FDataMarts>
+      </DataMarts>
+      <Constants>
+        <FConstantItem Name="Constants">
+          <ArgumentArray>
+            <ctm:ArgumentInfo-Array />
+          </ArgumentArray>
+        </FConstantItem>
+      </Constants>
+      <Enums>
+        <FDataClassFolder Name="Enums" />
+      </Enums>
+      <Children Capacity="4">
+        <FDataClassFolder Name="Common">
+          <Children Capacity="8">
+            <FDataClassItem Name="MicronBETestProcess">
+              <Content>
+                <DataClassMeta GenerateContainer="True" ContainerType="Dictionary" ContainerKeys="string" Name="MicronBETestProcess">
+                  <BaseClass>
+                    <cdm:ReflectedBaseTypeInfo TargetType="css:Process" />
+                  </BaseClass>
+                </DataClassMeta>
+              </Content>
+            </FDataClassItem>
+            <FDataClassItem Name="MicronBETestProduct">
+              <Content>
+                <DataClassMeta GenerateContainer="True" ContainerType="Dictionary" ContainerKeys="string" Name="MicronBETestProduct">
+                  <BaseClass>
+                    <cdm:ReflectedBaseTypeInfo TargetType="css:Product" />
+                  </BaseClass>
+                </DataClassMeta>
+              </Content>
+            </FDataClassItem>
+            <FDataClassItem Name="MicronBETestMcpPart">
+              <Content>
+                <DataClassMeta Name="MicronBETestMcpPart">
+                  <BaseClass>
+                    <cdm:ReflectedBaseTypeInfo TargetType="css:McpPart" />
+                  </BaseClass>
+                </DataClassMeta>
+              </Content>
+            </FDataClassItem>
+            <FDataClassItem Name="MicronBETestWipInfo">
+              <Content>
+                <DataClassMeta GenerateContainer="True" ContainerType="MultiDictionary" ContainerKeys="string" Name="MicronBETestWipInfo">
+                  <Interfaces>
+                    <cdm:ReflectedBaseTypeInfo TargetType="css:IWipInfo" />
+                  </Interfaces>
+                  <Properties>
+                    <cdm:PropertyMeta Name="LotID" PropertyType="string" />
+                    <cdm:PropertyMeta Name="UnitQty" PropertyType="double" />
+                    <cdm:PropertyMeta Name="Product" PropertyType="Mozart.SeePlan.SemiBE.DataModel.Product" />
+                    <cdm:PropertyMeta Name="Process" PropertyType="Mozart.SeePlan.SemiBE.DataModel.Process" />
+                    <cdm:PropertyMeta Name="InitialStep" PropertyType="Mozart.SeePlan.SemiBE.DataModel.BEStep" />
+                    <cdm:PropertyMeta Name="InitialEqp" PropertyType="Mozart.SeePlan.SemiBE.DataModel.Eqp" />
+                    <cdm:PropertyMeta Name="CurrentState" PropertyType="Mozart.SeePlan.Simulation.EntityState" />
+                    <cdm:PropertyMeta Name="WipProductID" PropertyType="string" />
+                    <cdm:PropertyMeta Name="WipProcessID" PropertyType="string" />
+                    <cdm:PropertyMeta Name="WipStepID" PropertyType="string" />
+                    <cdm:PropertyMeta Name="WipEqpID" PropertyType="string" />
+                    <cdm:PropertyMeta Name="WipState" PropertyType="string" />
+                    <cdm:PropertyMeta Name="WipStateTime" PropertyType="DateTime" />
+                    <cdm:PropertyMeta Name="LastTrackInTime" PropertyType="DateTime" />
+                    <cdm:PropertyMeta Name="LastProcessStartTime" PropertyType="DateTime" />
+                    <cdm:PropertyMeta Name="LastTrackOutTime" PropertyType="DateTime" />
+                    <cdm:PropertyMeta Name="LineID" PropertyType="string" />
+                  </Properties>
+                </DataClassMeta>
+              </Content>
+            </FDataClassItem>
+            <FDataClassItem Name="MicronBETestBEStep">
+              <Content>
+                <DataClassMeta Name="MicronBETestBEStep">
+                  <BaseClass>
+                    <cdm:ReflectedBaseTypeInfo TargetType="css:BEStep" />
+                  </BaseClass>
+                </DataClassMeta>
+              </Content>
+            </FDataClassItem>
+            <FDataClassItem Name="MicronBETestMcpProduct">
+              <Content>
+                <DataClassMeta Name="MicronBETestMcpProduct">
+                  <BaseClass>
+                    <cdm:ReflectedBaseTypeInfo TargetType="css:McpProduct" />
+                  </BaseClass>
+                </DataClassMeta>
+              </Content>
+            </FDataClassItem>
+          </Children>
+        </FDataClassFolder>
+        <FDataClassFolder Name="Pegging">
+          <Children Capacity="8">
+            <FDataClassItem Name="MicronBETestBEMoMaster">
+              <Content>
+                <DataClassMeta IsEntityObject="True" GenerateContainer="True" ContainerType="Dictionary" ContainerKeys="string" Name="MicronBETestBEMoMaster">
+                  <BaseClass>
+                    <cdm:ReflectedBaseTypeInfo TargetType="css2:BEMoMaster" />
+                  </BaseClass>
+                </DataClassMeta>
+              </Content>
+            </FDataClassItem>
+            <FDataClassItem Name="MicronBETestBEPegTarget">
+              <Content>
+                <DataClassMeta Name="MicronBETestBEPegTarget">
+                  <BaseClass>
+                    <cdm:ReflectedBaseTypeInfo TargetType="css2:BEPegTarget" />
+                  </BaseClass>
+                </DataClassMeta>
+              </Content>
+            </FDataClassItem>
+            <FDataClassItem Name="MicronBETestBEMoPlan">
+              <Content>
+                <DataClassMeta Name="MicronBETestBEMoPlan">
+                  <BaseClass>
+                    <cdm:ReflectedBaseTypeInfo TargetType="css2:BEMoPlan" />
+                  </BaseClass>
+                </DataClassMeta>
+              </Content>
+            </FDataClassItem>
+            <FDataClassItem Name="MicronBETestPlanWip">
+              <Content>
+                <DataClassMeta GenerateContainer="True" ContainerType="MultiDictionary" ContainerKeys="string" Name="MicronBETestPlanWip">
+                  <BaseClass>
+                    <cdm:ReflectedBaseTypeInfo TargetType="css2:PlanWip" />
+                  </BaseClass>
+                  <Properties>
+                    <cdm:PropertyMeta Name="Product" PropertyType="Product" />
+                    <cdm:PropertyMeta Name="LotID" PropertyType="string" />
+                    <cdm:PropertyMeta Name="LineID" PropertyType="string" />
+                  </Properties>
+                </DataClassMeta>
+              </Content>
+            </FDataClassItem>
+            <FDataClassItem Name="MicronBETestBEPegPart">
+              <Content>
+                <DataClassMeta Name="MicronBETestBEPegPart">
+                  <BaseClass>
+                    <cdm:ReflectedBaseTypeInfo TargetType="css2:BEPegPart" />
+                  </BaseClass>
+                </DataClassMeta>
+              </Content>
+            </FDataClassItem>
+          </Children>
+        </FDataClassFolder>
+      </Children>
+    </FDataClassRoot>
+  </vxml:Content>
+</vxml:Document>
