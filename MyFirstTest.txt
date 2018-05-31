@@ -2,5 +2,5 @@ Hello!!
 This is my first test!
 There are someting need to be done, but good good study, day day up!
 If this is a .cs file, how can I sync it by using GitHub?
-It seems that it need a answer.
+It seems that it needs a answer.
 
